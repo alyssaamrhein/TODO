@@ -13,6 +13,10 @@ var footerTemplate = _.template( $('#footer-template').html() );
 
 
 // These are examples, please remove and replace with your own code
+
+
+var time = $( "#todo-list li" ).length;
+
  $('#todoapp footer').html(footerTemplate({
      activeTodoCount: 0,
      completedTodos: 0,
@@ -20,6 +24,9 @@ var footerTemplate = _.template( $('#footer-template').html() );
  }));
 
 // this pulls the input in the main input putter
+
+
+
 $('#new-todo').keypress(function(event) {
   var todo = $('#new-todo').val();
    if ( event.which == 13 ) {
@@ -33,15 +40,15 @@ $('#new-todo').keypress(function(event) {
 });
 
 
-// this toggles the li's
-// $( "li" ).click(function() {
-//   $( this ).toggleClass( "completed" );
-// });
-
 $('#todo-list').on('click', 'li input.toggle', function (event) {
   $(this).closest('li').toggleClass('completed');
 });
 
+
 $('#todo-list').on('click', 'li button.destroy', function (event) {
   $(this).parent().remove();
+});
+
+$( "#toggle-all" ).click(function() {
+  $( "#todo-list li" ).toggleClass('completed');
 });
