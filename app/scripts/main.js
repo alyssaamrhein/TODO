@@ -36,6 +36,7 @@ $('#new-todo').keypress(function(event) {
          completed: '',
          checked: ''
      }));
+      $(this).val('');
     }
 });
 
@@ -50,5 +51,6 @@ $('#todo-list').on('click', 'li button.destroy', function (event) {
 });
 
 $( "#toggle-all" ).click(function() {
-  $( "#todo-list li" ).toggleClass('completed');
+  $( "#todo-list li" ).toggleClass('completed'),
+  $(  ".toggle"  ).prop('checked' , true);
 });
