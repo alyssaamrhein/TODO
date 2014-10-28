@@ -3,9 +3,6 @@ _.templateSettings = {
   interpolate: /\{\{=(.+?)\}\}/g
 };
 
-//Dear diary, today was not productive
-
-
 var todoTemplate   = _.template( $('#todo-template').html() );
 var footerTemplate = _.template( $('#footer-template').html() );
 // Don't remove anything above this line ----------------------- //
@@ -13,6 +10,7 @@ var footerTemplate = _.template( $('#footer-template').html() );
 
 // These are examples, please remove and replace with your own code
 
+//new line of nothing to commit
 
 
 // These are examples, please remove and replace with your own code
